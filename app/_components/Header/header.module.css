@@ -1,0 +1,18 @@
+.headerContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.navContainer{
+    display: inline-flex;
+    background-color: #7CB9F2;
+    padding: 10px;
+    border-radius: 10px;
+}
+.navContainer a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.active{
+    color: white
+}
