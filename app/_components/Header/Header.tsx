@@ -14,13 +14,16 @@ const links = [
 
 const Header: React.FC = () => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div className={styles.headerContainer}>
       <nav className={styles.navContainer}>
         {links.map((link) => (
           <Link key={link.name} href={link.href}>
-            <p className={pathname === link.href ? styles.active : ""}>
+            <p
+              className={`${pathname === link.href ? styles.active : ""} ${
+                styles.navLink
+              }`}
+            >
               {link.name}
             </p>
           </Link>

@@ -1,40 +1,17 @@
 import styles from "./page.module.css";
 import { QueryPosts } from "./actions/QueryPosts";
-
-interface Post {
-  id: number;
-  Title: string;
-  Description: string;
-}
+import HeroSection from "./_components/HeroSection/HeroSection";
+import BlogList from "./_components/BlogList/BlogList";
+import { Post } from "./lib/definitions";
 
 export default async function Home() {
-  let posts: Post[];
-  try {
-    posts = (await QueryPosts()) || [];
-  } catch (error) {
-    console.error("Failed to fetch posts:", error);
-    return (
-      <div>
-        <main className={styles.main}>
-          <h1>Failed to load posts. Please try again later.</h1>
-        </main>
-      </div>
-    );
-  }
+  const posts: Post[] = (await QueryPosts()) || [];
 
   return (
     <div>
       <main className={styles.main}>
-        {posts.length !== 0 ? (
-          posts.map((post) => (
-            <div key={post.id}>
-              <h2>{post.Title}</h2>
-              <p>{post.Description}</p>
-            </div>
-          ))
-        ) : (
-          <h1>No posts found</h1>
-        )}
+        <HeroSection />
+        <BlogList initialArticles={posts} />
       </main>
     </div>
   );
