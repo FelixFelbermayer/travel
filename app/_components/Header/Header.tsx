@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.headerContainer}>
       <Image
-        src="/Logo.png"
+        src="/Logo1.png"
         width={223}
         height={114}
         alt="Account leaf image"
