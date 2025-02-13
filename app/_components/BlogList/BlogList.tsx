@@ -42,7 +42,7 @@ export default function BlogList({
       <div className={styles.filterContainer}>
         <h3>Filter blogposts</h3>
 
-        {/* <Select
+        <Select
           placeholder="Continent"
           value={selectedContinent || undefined}
           onChange={(value) => {
@@ -70,7 +70,7 @@ export default function BlogList({
                 {country}
               </Select.Option>
             ))}
-        </Select> */}
+        </Select>
         <button onClick={handleFilter}>Apply</button>
         <button onClick={handleReset}>Reset</button>
       </div>
