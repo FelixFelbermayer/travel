@@ -13,6 +13,17 @@ const HeroSection: React.FC = () => {
           alt="Account leaf image"
           className={styles.heroImage}
         />
+        <h1 className={styles.heroText}>Discover the World’s Hidden Wonders</h1>
+        <h2 className={styles.heroTextSmall}>
+          A place where nature and adventure unite
+        </h2>
+        <Image
+          src="/FelixHero.png"
+          width={1289}
+          height={1289}
+          alt="Account leaf image"
+          className={styles.felixImage}
+        />
       </div>
     </>
   );

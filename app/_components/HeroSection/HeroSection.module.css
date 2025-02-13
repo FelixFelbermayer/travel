@@ -3,6 +3,9 @@
   height: 80vh;
   overflow: hidden;
   margin-top: 20px;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 .heroImage {
@@ -10,4 +13,76 @@
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  -webkit-filter: blur(2px);
+  padding: 5px;
+}
+.heroText {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 79px;
+  width: 800px;
+  text-align: left;
+}
+
+.heroTextSmall {
+  position: absolute;
+  top: 260px;
+  left: 5%;
+  font-size: 30px;
+  width: 70%;
+  text-align: left;
+}
+.felixImage {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1;
+  width: 20%;
+  height: auto;
+}
+@media (max-width: 500px) {
+  .heroText {
+    font-size: 11vw;
+    width: 70%;
+  }
+  .heroTextSmall {
+    font-size: 5vw;
+    width: 70%;
+    top: 70vw;
+  }
+  .heroSection {
+    height: 60vh;
+  }
+  .felixImage {
+    width: 30%;
+    height: auto;
+  }
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .heroText {
+    font-size: 10vw;
+    width: 90%;
+  }
+  .heroTextSmall {
+    font-size: 5vw;
+    width: 70%;
+    top: 50vw;
+  }
+  .heroSection {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heroText {
+    font-size: 10vw;
+    width: 90%;
+  }
+
+  .heroTextSmall {
+    font-size: 3vw;
+    width: 70%;
+    top: 49vw;
+  }
 }
