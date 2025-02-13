@@ -1,32 +1,54 @@
-.headerContainer{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 50px;
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
-.navContainer{
-    display: inline-flex;
-    background-color: var(--contrast);
-    padding: 10px;
-    border-radius: 10px;
+.navContainer {
+  display: flex;
+  align-items: center;
 }
-.navContainer a{
-    padding-left: 10px;
-    padding-right: 10px;
+.navContainer a {
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.navLink{
-    color: var(--background);
+.navLink:hover {
+  color: var(--textColor);
 }
-.navLink:hover{
-    color: var(--textColor);
-}
-.active{
-    text-decoration: underline;
-    color: var(--textColor);
+.active {
+  text-decoration: underline;
 }
 
+.navImage {
+  width: 35px;
+  height: 35px;
+  align-self: center;
+}
+.logoImage {
+  width: 120px;
+  height: auto;
+}
+.mobileNavContainer {
+  display: none;
+}
+.mobileNavInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobileNavInner p {
+  font-size: 40px;
+  color: black;
+  line-height: 2;
+}
 @media (max-width: 768px) {
- .headerContainer{
-justify-content: center;
- }
+  .navContainer,
+  .navImage {
+    display: none;
+  }
+  .mobileNavContainer {
+    display: block;
+    align-self: center;
+    font-size: 25px;
+  }
 }

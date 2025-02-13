@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { getFilteredArticles, QueryPosts } from "../../actions/QueryPosts";
 import { Post } from "@/app/lib/definitions";
-import styles from "./blogList.module.css";
+import styles from "./BlogList.module.css";
 import Image from "next/image";
 import { Select } from "antd";
 
@@ -42,12 +42,12 @@ export default function BlogList({
       <div className={styles.filterContainer}>
         <h3>Filter blogposts</h3>
 
-        <Select
+        {/* <Select
           placeholder="Continent"
-          value={selectedContinent}
+          value={selectedContinent || undefined}
           onChange={(value) => {
             setSelectedContinent(value);
-            setSelectedCountry(""); // Reset country when continent changes
+            setSelectedCountry("");
           }}
           style={{ width: 200 }}
         >
@@ -57,11 +57,11 @@ export default function BlogList({
             </Select.Option>
           ))}
         </Select>
+
         <Select
           placeholder="Country"
-          value={selectedCountry}
+          value={selectedCountry || undefined}
           onChange={(value) => setSelectedCountry(value)}
-          style={{ width: 200 }}
           disabled={!selectedContinent}
         >
           {selectedContinent &&
@@ -70,7 +70,7 @@ export default function BlogList({
                 {country}
               </Select.Option>
             ))}
-        </Select>
+        </Select> */}
         <button onClick={handleFilter}>Apply</button>
         <button onClick={handleReset}>Reset</button>
       </div>

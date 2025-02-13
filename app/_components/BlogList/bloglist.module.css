@@ -1,39 +1,43 @@
-.filterContainer{
-    background-color: var(--boxes);
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+.filterContainer {
+  background-color: var(--boxes);
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 20px;
+  border-radius: 10px;
+  height: 320px;
 }
-.filterAndBlogContainer{
-    display: flex;
-    flex-direction: row;
+.filterAndBlogContainer {
+  display: flex;
+  flex-direction: row;
 }
-.blogContainer{
-    margin-left: 15%;
-    width: 100%;
+.blogContainer {
+  margin-left: 15%;
+  width: 100%;
 }
-.blogPostContainer{
-    display: flex;
-    height: 150px;
-    background-color: var(--boxes);
-    justify-content: space-between;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-.image{
-    height: 100%;
-    width: auto;
-    aspect-ratio: 1/1;
-}
-.imageContainer{
-    display: flex;
-    width: 450px;
-}
-.lastImage{
+.blogPostContainer {
+  display: flex;
+  height: 150px;
+  background-color: var(--boxes);
+  justify-content: space-between;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
-.textContainer{
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.image {
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1/1;
+}
+.imageContainer {
+  display: flex;
+  width: 450px;
+}
+.lastImage {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.textContainer {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

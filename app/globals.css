@@ -1,8 +1,8 @@
 :root {
-  --background: #0C1421;
-  --foreground: #f6f6f6;
-  --contrast: #7CB9F2;
-  --textColor: #F7F7F7;
+  --background: #f7f7f7;
+  --foreground: #000000;
+  --contrast: #7cb9f2;
+  --textColor: #000000;
   --boxes: #ffffff20;
 }
 /* @media (prefers-color-scheme: dark) {
@@ -11,6 +11,9 @@
     --foreground: #ededed;
   }
 } */
+html {
+  scrollbar-gutter: stable;
+}
 
 html,
 body {
@@ -38,7 +41,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-main{
+main {
   overflow: hidden;
 }
 @media (prefers-color-scheme: dark) {

@@ -3,3 +3,7 @@ export type Post = {
   Title: string;
   Description: string;
 };
+export type LinkType = {
+  name: string;
+  href: string;
+};

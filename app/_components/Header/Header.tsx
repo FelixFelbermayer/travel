@@ -3,8 +3,11 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./header.module.css";
+import Image from "next/image";
+import MobileNav from "./MobileNav/Mobilenav";
+import { LinkType } from "@/app/lib/definitions";
 
-const links = [
+const links: LinkType[] = [
   { name: "Home", href: "/" },
   { name: "Shop", href: "/shop" },
   { name: "Contact", href: "/contact" },
@@ -14,8 +17,16 @@ const links = [
 
 const Header: React.FC = () => {
   const pathname = usePathname();
+
   return (
     <div className={styles.headerContainer}>
+      <Image
+        src="/Logo.png"
+        width={223}
+        height={114}
+        alt="Account leaf image"
+        className={styles.logoImage}
+      />
       <nav className={styles.navContainer}>
         {links.map((link) => (
           <Link key={link.name} href={link.href}>
@@ -29,6 +40,14 @@ const Header: React.FC = () => {
           </Link>
         ))}
       </nav>
+      <MobileNav links={links} />
+      <Image
+        src="/leaf.png"
+        width={1200}
+        height={1200}
+        alt="Account leaf image"
+        className={styles.navImage}
+      />
     </div>
   );
 };
