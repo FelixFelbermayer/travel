@@ -6,6 +6,7 @@ import { Post } from "@/app/lib/definitions";
 import styles from "./BlogList.module.css";
 import Image from "next/image";
 import { Select } from "antd";
+import TravelCard from "./TravelCard/TravelCard";
 
 export default function BlogList({
   initialArticles,
@@ -78,37 +79,7 @@ export default function BlogList({
       {/* List of blog articles */}
       <div className={styles.blogContainer}>
         {articles.length !== 0 ? (
-          articles.map((post) => (
-            <div key={post.id} className={styles.blogPostContainer}>
-              <div className={styles.textContainer}>
-                <h2>{post.Title}</h2>
-                <p>{post.Description}</p>
-              </div>
-              <div className={styles.imageContainer}>
-                <Image
-                  src="/img1.jpg"
-                  width={1200}
-                  height={1200}
-                  alt="Felix Hero image"
-                  className={styles.image}
-                />
-                <Image
-                  src="/img2.jpg"
-                  width={1200}
-                  height={1200}
-                  alt="Felix Hero image"
-                  className={styles.image}
-                />
-                <Image
-                  src="/img3.jpg"
-                  width={1200}
-                  height={1200}
-                  alt="Felix Hero image"
-                  className={`${styles.image} ${styles.lastImage}`}
-                />
-              </div>
-            </div>
-          ))
+          articles.map((post) => <TravelCard post={post} />)
         ) : (
           <h1>No posts found</h1>
         )}
