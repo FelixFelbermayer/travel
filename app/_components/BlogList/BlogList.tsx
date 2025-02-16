@@ -79,7 +79,7 @@ export default function BlogList({
       {/* List of blog articles */}
       <div className={styles.blogContainer}>
         {articles.length !== 0 ? (
-          articles.map((post) => <TravelCard post={post} />)
+          articles.map((post) => <TravelCard key={post.id} post={post} />)
         ) : (
           <h1>No posts found</h1>
         )}
