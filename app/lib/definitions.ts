@@ -3,6 +3,8 @@ export type Post = {
   Title: string;
   Description: string;
   City: string;
+  Country: string;
+  price: number;
 };
 export type LinkType = {
   name: string;
