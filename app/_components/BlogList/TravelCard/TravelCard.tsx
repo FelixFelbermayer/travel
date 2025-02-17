@@ -3,8 +3,8 @@ import { Post } from "@/app/lib/definitions";
 import styles from "./TravelCard.module.css";
 import Image from "next/image";
 import { Button } from "antd";
-const TravelCard: React.FC<Post> = (props) => {
-  const { Country, City, price } = props.post;
+export default function TravelCard({ post }: { post: Post }) {
+  const { Country, City, price } = post;
 
   return (
     <div className={styles.travelCard}>
@@ -35,6 +35,4 @@ const TravelCard: React.FC<Post> = (props) => {
       </div>
     </div>
   );
-};
-
-export default TravelCard;
+}
