@@ -38,3 +38,8 @@
   display: block;
   padding-bottom: 10px;
 }
+.buttonContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}

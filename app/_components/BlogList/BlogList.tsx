@@ -94,7 +94,7 @@ export default function BlogList({
               min={0}
               max={1000}
               defaultValue={3}
-              placeholder="Min"
+              placeholder="Min €"
               onChange={(value) => setMinPrice(value ?? 0)}
             />
             <p className={styles.dividerSymbol}> - </p>
@@ -102,20 +102,12 @@ export default function BlogList({
               min={0}
               max={1000}
               defaultValue={3}
-              placeholder="Max"
+              placeholder="Max €"
               onChange={(value) => setMaxPrice(value ?? 0)}
             />
           </div>
         </div>
-        <div>
-          <Button
-            type="primary"
-            className={styles.moreButton}
-            style={{ backgroundColor: "#fd8a67" }}
-            onClick={handleFilter}
-          >
-            Apply
-          </Button>
+        <div className={styles.buttonContainer}>
           <Button
             type="primary"
             className={styles.moreButton}
@@ -123,6 +115,14 @@ export default function BlogList({
             onClick={handleReset}
           >
             Reset filter
+          </Button>
+          <Button
+            type="primary"
+            className={styles.moreButton}
+            style={{ backgroundColor: "#fd8a67" }}
+            onClick={handleFilter}
+          >
+            Apply
           </Button>
         </div>
       </div>
