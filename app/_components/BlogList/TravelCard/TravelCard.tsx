@@ -3,8 +3,10 @@ import { Post } from "@/app/lib/definitions";
 import styles from "./TravelCard.module.css";
 import Image from "next/image";
 import { Button } from "antd";
+import Link from "next/link";
+
 export default function TravelCard({ post }: { post: Post }) {
-  const { Country, City, price } = post;
+  const { id, Country, City, price } = post;
 
   return (
     <div className={styles.travelCard}>
@@ -24,13 +26,17 @@ export default function TravelCard({ post }: { post: Post }) {
             <h3 className={styles.travelCardCountry}>{Country}</h3>
             <p className={styles.travelCardText}>{price}€</p>
           </div>
-          <Button
-            type="primary"
-            className={styles.moreButton}
-            style={{ backgroundColor: "#fd8a67" }}
-          >
-            Show more!{" "}
-          </Button>
+          <Link href={`/posts/${id}`} passHref>
+            {" "}
+            {/* Use Link for navigation */}
+            <Button
+              type="primary"
+              className={styles.moreButton}
+              style={{ backgroundColor: "#fd8a67" }}
+            >
+              Show more!
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

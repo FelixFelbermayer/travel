@@ -12,6 +12,7 @@ export default function BlogList({
 }: {
   initialArticles: Post[] | [];
 }) {
+  console.log(initialArticles);
   const [articles, setArticles] = useState(initialArticles);
   const [selectedContinent, setSelectedContinent] = useState<
     keyof typeof countries | ""
