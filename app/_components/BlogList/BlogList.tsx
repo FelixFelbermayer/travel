@@ -13,24 +13,25 @@ export default function BlogList({
   initialArticles: Post[] | [];
 }) {
   console.log(initialArticles);
-  const [articles, setArticles] = useState(initialArticles);
+  const [articles, setArticles] = useState<Post[]>(initialArticles);
   const [selectedContinent, setSelectedContinent] = useState<
     keyof typeof countries | ""
   >("");
   const [selectedCountry, setSelectedCountry] = useState<string>("");
-  const [minPrice, setMinPrice] = useState<number>(0);
-  const [maxPrice, setMaxPrice] = useState<number>(0);
+  // Uncomment when implementing price filtering
+  // const [minPrice, setMinPrice] = useState<number>(0);
+  // const [maxPrice, setMaxPrice] = useState<number>(0);
 
   const handleFilter = async () => {
     // Call the server action to fetch filtered articles
-    const filteredArticles = await getFilteredArticles(selectedCountry);
+    const filteredArticles: Post[] = await getFilteredArticles(selectedCountry);
     if (filteredArticles) setArticles(filteredArticles);
   };
   const handleReset = async () => {
     // Call the server action to fetch filtered articles
     setSelectedCountry("");
     setSelectedContinent("");
-    const filteredArticles = await QueryPosts();
+    const filteredArticles: Post[] = (await QueryPosts()) || [];
     if (filteredArticles) setArticles(filteredArticles);
   };
 
@@ -96,7 +97,9 @@ export default function BlogList({
               max={1000}
               defaultValue={3}
               placeholder="Min €"
-              onChange={(value) => setMinPrice(value ?? 0)}
+              onChange={() => {
+                /* Price filtering not implemented yet */
+              }}
             />
             <p className={styles.dividerSymbol}> - </p>
             <InputNumber
@@ -104,7 +107,9 @@ export default function BlogList({
               max={1000}
               defaultValue={3}
               placeholder="Max €"
-              onChange={(value) => setMaxPrice(value ?? 0)}
+              onChange={() => {
+                /* Price filtering not implemented yet */
+              }}
             />
           </div>
         </div>
