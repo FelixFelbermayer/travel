@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { getFilteredArticles, QueryPosts } from "../../actions/QueryPosts";
 import { Post } from "@/app/lib/definitions";
-import styles from "@/app/_components/BlogList/BlogList.module.css";
+import styles from "@/app/_components/BlogList/Bloglist.module.css";
 import { Select, InputNumber, Button } from "antd";
 import TravelCard from "./TravelCard/TravelCard";
 
